@@ -1,0 +1,24 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# venvs (just in case)
+env/
+venv/
+.venv/
+
+# editors
+.vscode/
+.idea/
+
+# logs
+*.log

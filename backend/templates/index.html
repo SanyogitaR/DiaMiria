@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DiaMiria — Diabetes Prediction</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+  <script defer src="/static/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="topbar">
+  <h1>DiaMiria</h1>
+  <p class="tagline">
+    This project demonstrates how machine learning models can be applied in healthcare prediction tasks.  
+    It is built using the <strong>Pima Indian Diabetes Dataset</strong> — a well-known dataset used for binary classification (diabetic / non-diabetic).  
+    Please note: this app is an academic project and not a substitute for medical diagnosis.
+  </p>
+</header>
+
+
+  <!-- Main Card -->
+  <main class="container glass">
+    <section class="intro">
+      <h2>Enter your health details</h2>
+      <!-- <p class="small">
+        This tool uses a neural network trained on the Pima Indian Diabetes dataset.
+        It’s for **screening/education only** — not a medical diagnosis.
+      </p> -->
+    </section>
+
+    <form id="prediction-form" class="grid">
+      <label>
+        <span>Pregnancies</span>
+        <input type="number" placeholder="e.g., 2" required />
+        <small class="hint">Number of times pregnant</small>
+      </label>
+
+      <label>
+        <span>Glucose</span>
+        <input type="number" placeholder="e.g., 120" required />
+        <small class="hint">Plasma glucose concentration</small>
+      </label>
+
+      <label>
+        <span>Blood Pressure (mm Hg)</span>
+        <input type="number" placeholder="e.g., 70" required />
+        <small class="hint">Diastolic BP</small>
+      </label>
+
+      <label>
+        <span>Skin Thickness (mm)</span>
+        <input type="number" placeholder="e.g., 20" required />
+        <small class="hint">Triceps skinfold</small>
+      </label>
+
+      <label>
+        <span>Insulin (μU/mL)</span>
+        <input type="number" placeholder="e.g., 80" required />
+        <small class="hint">2-hour serum insulin</small>
+      </label>
+
+      <label>
+        <span>BMI</span>
+        <input type="number" step="0.1" placeholder="e.g., 27.5" required />
+        <small class="hint">Body Mass Index</small>
+      </label>
+
+      <label>
+        <span>Diabetes Pedigree Function</span>
+        <input type="number" step="0.001" placeholder="e.g., 0.45" required />
+        <small class="hint">Family history metric</small>
+      </label>
+
+      <label>
+        <span>Age</span>
+        <input type="number" placeholder="e.g., 35" required />
+        <small class="hint">Age in years</small>
+      </label>
+
+      <button type="submit" class="primary">Predict</button>
+    </form>
+
+    <section id="result" class="result hidden">
+      <div class="result-header">
+        <h3 id="pred-label">Prediction</h3>
+        <span id="pred-chip" class="chip">—</span>
+      </div>
+
+      <div class="bar-wrap" aria-label="Probability">
+        <div id="prob-bar" class="bar"></div>
+      </div>
+      <p class="prob-text">Probability: <strong id="prob-text">—%</strong></p>
+
+      <div class="tips">
+        <h4>What this means</h4>
+        <ul>
+          <li><strong>&lt; 40%</strong> — Low risk in this model. Keep up healthy habits.</li>
+          <li><strong>40–60%</strong> — Borderline. Consider rechecking and lifestyle review.</li>
+          <li><strong>&gt;= 60%</strong> — Elevated risk. Please consult a clinician for testing.</li>
+        </ul>
+        <p class="disclaimer">
+          ⚠️ This is not medical advice. For symptoms or concerns, seek professional care.
+        </p>
+      </div>
+    </section>
+
+    <section class="find-code">
+      <!-- <p>
+        View full source on GitHub:
+        <a class="link" href="https://github.com/SanyogitaR/DiaMiria" target="_blank" rel="noopener">
+          github.com/SanyogitaR/DiaMiria
+        </a>
+      </p> -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <p>
+    View full source code on  
+    <a href="https://github.com/SanyogitaR/DiaMiria" target="_blank" rel="noopener" class="gh-link">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="32" height="32" />
+      GitHub Repo
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
